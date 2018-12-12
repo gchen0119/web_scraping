@@ -6,7 +6,7 @@
 import sys
 import pandas as pd
 def getCommodityPrice():
-    if len(sys.arv)!=4:
+    if len(sys.argv)!=4:
         raise ValueError("requires 3 input arguments, e.g., 2018-11-07 2018-12-01 gold")
     df = pd.read_csv('./data/data.csv')
     mask = (df['date']>=sys.argv[1]) & (df['date']<=sys.argv[2]) # alternatively, df[df.some_date.between(start_date, end_date)]
